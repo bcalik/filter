@@ -216,7 +216,7 @@ class Filter
         });
 
         $this->registerFilter('to_json', function($value, array $args) {
-            return json_encode($value);
+            return json_encode($value, JSON_UNESCAPED_UNICODE);
         });
 
         $this->registerFilter('to_array', function($value, array $args) {
